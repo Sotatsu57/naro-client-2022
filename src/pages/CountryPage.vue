@@ -19,7 +19,7 @@ onMounted(async () => {
     <h1>
       {{ countryCode }}
     </h1>
-    <div v-for="city in cities">
+    <div v-for="(city, index) in cities" :key="index">
       <router-link
         :to="{ name: 'city', params: { cityName: city.name.String } }"
         >{{ city.name.String }}</router-link

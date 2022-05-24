@@ -12,7 +12,7 @@ onMounted(async () => {
 <template>
   <div>
     <h1>Country</h1>
-    <div v-for="country in countries">
+    <div v-for="(country, index) in countries" :key="index">
       <router-link
         :to="{ name: 'country', params: { countryCode: country.code.String } }"
         >{{ country.name.String }}</router-link
